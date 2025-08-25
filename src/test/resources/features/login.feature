@@ -10,6 +10,10 @@ Scenario: Correct id and pin
     When I login to ATM with id 1 and pin 111
     Then I can login
 
+Scenario: Incorrect id
+    When I login to ATM with id 3 and pin 123
+    Then I cannot login
+
 Scenario: Incorrect pin
     When I login to ATM with id 1 and pin 222
     Then I cannot login
